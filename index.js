@@ -1,7 +1,7 @@
 
 
 
-//Q.1 
+//Q.1 (Level - Easy )
 // to check if a number is palindrome or not
 
 
@@ -49,7 +49,7 @@ function palindromeCheck(num) {
   
 
 
-// Q.2
+//Q.2 (Level - Easy )
 // given an integer array, return true if any value appears atleast twice and false if all values are distinct
 // arr=[1,1,2,3,4] True
 // arr=[1,2,3,4] False
@@ -72,7 +72,7 @@ const checkIsRepeating = (arr) => {
 //   console.log(res)
 
 
-// Q.3
+//Q.3 (Level - Easy )
 // given two string s and t , returns true if t is an anagram of s 
 // Anagram is a word or phrase formed by rearranging letters of a different word or phrase
 
