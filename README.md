@@ -25,6 +25,6 @@ If you'd like to contribute to this repository by adding more questions, solutio
 4. Test your solutions thoroughly.
 5. Commit your changes with descriptive commit messages.
 6. Push your changes to your forked repository.
-7. Create a Pull Request (PR) to merge your changes into this repository's `main` branch.
+7. Create a Pull Request (PR) to merge your changes into this repository's `master` branch.
 
 Please make sure your contributions align with the repository's purpose and maintain a consistent format.
