@@ -27,26 +27,26 @@
 
 // solution - 1
 function palindromeCheck(num) {
-    if (num > 0) {
-      let p = num % 10 * 10
-      let q = Math.floor(num / 10)
-      while (q>0) { 
-        if (q % 10 + p !== num) {
-          p = (q % 10 + p) * 10
-          q = Math.floor(q / 10)
-        } else {
-          console.log(`${num} is a palindrome`)
-          return true
-          break
-        }
+  if (num > 0) {
+    let p = num % 10 * 10
+    let q = Math.floor(num / 10)
+    while (q > 0) {
+      if (q % 10 + p !== num) {
+        p = (q % 10 + p) * 10
+        q = Math.floor(q / 10)
+      } else {
+        console.log(`${num} is a palindrome`)
+        return true
+        break
       }
-      console.log(`${num} is not a palindrome`)
-    } else {
-      console.log(`${num} is not a palindrome`)
     }
+    console.log(`${num} is not a palindrome`)
+  } else {
+    console.log(`${num} is not a palindrome`)
   }
+}
 //   palindromeCheck(12021)
-  
+
 
 
 //Q.2 (Level - Easy )
@@ -57,19 +57,19 @@ function palindromeCheck(num) {
 
 // Solution - 2
 const checkIsRepeating = (arr) => {
-    const freq = {}
-    arr.forEach((elem) => freq[elem] ? freq[elem] += 1 : freq[elem] = 1)
-    const values = Object.values(freq)
-    for (let i = 0; i < values.length; i++) {
-      if (values[i] >= 2) {
-        return true;
-        break;
-      }
+  const freq = {}
+  arr.forEach((elem) => freq[elem] ? freq[elem] += 1 : freq[elem] = 1)
+  const values = Object.values(freq)
+  for (let i = 0; i < values.length; i++) {
+    if (values[i] >= 2) {
+      return true;
+      break;
     }
-    return false;
   }
-  const res = checkIsRepeating([1, 2, 3, 4, 55, 54, 44, 6, 77, 77])
-//   console.log(res)
+  return false;
+}
+// const res = checkIsRepeating([1, 2, 3, 4, 55, 54, 44, 6, 77, 77])
+// console.log(res)
 
 
 //Q.3 (Level - Easy )
@@ -79,6 +79,37 @@ const checkIsRepeating = (arr) => {
 // s= anagram t=nagaram
 // output: true
 
-const checkAnagram = (s,t)=>{
-  
+const checkAnagram = (s, t) => {
+  const sArr = s.split('')
+  const tArr = t.split('')
+
+  let isAnagram = false
+
+  if (sArr.length === tArr.length) {
+
+    for (let i = 0; i < tArr.length; i++) {
+
+      const element = tArr[i];
+
+      for (let j = 0; j < sArr.length; j++) {
+
+        if (element === sArr[j]) {
+
+          sArr[j] = 'checked'
+          isAnagram = true
+          break
+          
+        } else {
+          isAnagram = false
+        }
+      }
+
+    }
+    return isAnagram
+  }
+  else {
+    return false;
+  }
 }
+const result = checkAnagram('anagram', 'nagaram')
+console.log('result', res)
